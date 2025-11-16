@@ -4,6 +4,44 @@
 
 Python code to calculate the burrow wheeler transform equivalent of a given string.
 
+## Quick Start
+
+#### Clone repository in local
+
+```bash
+git clone https://github.com/GiZano/burrow-wheeler-calculator.git
+```
+
+#### Go in project directory
+
+```bash
+cd burrow-wheeler-calculator
+```
+
+### BWT Debug
+
+```bash
+python ./app/Components/bwt_calculator.py
+```
+
+### Terminal App
+
+```bash
+python ./app/Terminal/main.py
+```
+
+### API App
+
+- Windows
+
+```bash
+# Open virtual environment
+.venv\Scripts\activate
+# Run app
+fastapi dev app/API/api.py
+
+```
+
 ## Burrow Wheeler Transform Algorithm
 
 Algorithm to make similar character be near to each other,
@@ -60,3 +98,5 @@ BANANA$:
 ## Mock Data
 
 The mock data, present in "data/input.txt" can be found <a href="https://rest.uniprot.org/uniprotkb/O95905.fasta">here</a>
+
+

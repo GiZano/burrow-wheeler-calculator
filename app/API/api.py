@@ -24,7 +24,7 @@ async def root():
     }
 
 # bwt calculator
-@app.post("/calculator/{value}")
+@app.get("/calculator/{value}")
 async def calculator(value: str):
     encoded_string = bwt(value)
     return {
