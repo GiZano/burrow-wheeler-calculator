@@ -3,6 +3,10 @@
 ## Description
 
 Python code to calculate the burrow wheeler transform equivalent of a given string.
+There are three main ways to use this code:
+- <a href="#debug">Debug</a>
+- <a href="#terminal">Terminal</a>
+- <a href="#api">API server - client</a>
 
 ## Quick Start
 
@@ -18,28 +22,38 @@ git clone https://github.com/GiZano/burrow-wheeler-calculator.git
 cd burrow-wheeler-calculator
 ```
 
-### BWT Debug
+### <p id="debug">BWT Debug</p>
 
 ```bash
 python ./app/Components/bwt_calculator.py
 ```
 
-### Terminal App
+### <p id="terminal">Terminal App</p>
 
 ```bash
 python ./app/Terminal/main.py
 ```
 
-### API App
+### <p id="api">API App</p>
 
-- Windows
+#### Server
+
+- <i>venv opening refers only to windows</i>
 
 ```bash
 # Open virtual environment
-.venv\Scripts\activate
-# Run app
-fastapi dev app/API/api.py
+.\.venv\Scripts\activate
+# Start Server
+fastapi dev .\app\API\api.py
+```
 
+#### Client
+
+```bash
+# Open virtual environment
+.\.venv\Scripts\activate
+# Run client
+python '.\app\Client Tester\client.py'
 ```
 
 ## Burrow Wheeler Transform Algorithm

@@ -22,8 +22,9 @@ def program():
                 else:
                     url = f"http://localhost:8000/calculator/{original}"
                     response = requests.get(url)
+                    transformed = response.json()['encoded']
                     print(f"Original: {original}")
-                    print(response.json()['encoded'])
+                    print(f"Transformed: {transformed}")
 
 if __name__ == "__main__":
     print(program())
