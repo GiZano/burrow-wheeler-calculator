@@ -22,15 +22,15 @@ def program():
                 print(f"Transformed: {bwt.encoder(valore)}")
             case 2:
                 ### File Input ###
-                with open("input.txt", "r") as in_file:
-                    with open("output.txt", "w") as out_file:
-                        value = in_file.read()
+                with open("data/input.txt", "r") as in_file:
+                    with open("data/output.txt", "w") as out_file:
+                        value = ""
+                        for line in in_file:
+                           # If the file is made of multiple lines, put it all together in one single line
+                           value = value + line.strip("\n").strip()
                         transformed = bwt.encoder(value)
                         print(f"Transformed: {transformed}")
                         out_file.write(transformed)
-
-                    
-
 
 if __name__ == "__main__":
     print(program())
