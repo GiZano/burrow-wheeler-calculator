@@ -90,9 +90,15 @@ Output: ['banana$', 'anana$b', 'nana$ba', 'ana$ban', 'na$bana', 'a$banan', '$ban
 def rotations_calculator_while(line:str):
     rotations = [line]
     shifted_line = line
-    while rotations[0] != shifted_line or len(rotations) <= 1:
+    if len(line) > 2:
+        while rotations[0] != shifted_line or len(rotations) <= 1:
+            rotations.append(shifted_line)
+            shifted_line = shifted_line[1:] + shifted_line[0]
+        rotations = rotations[1:]
+    else:
+        shifted_line = line [1] + line[0]
         rotations.append(shifted_line)
-        shifted_line = shifted_line[1:] + shifted_line[0]
+    print(rotations)
     return rotations
 
 if __name__ == '__main__':

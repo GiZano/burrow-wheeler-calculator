@@ -1,4 +1,16 @@
-import bwt_calculator as bwt
+import sys
+import os
+
+# Get absolute path of project directory 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)                # get project root 
+components_path = os.path.join(project_root, 'Components') # get components path
+
+sys.path.insert(0, components_path)
+sys.path.insert(0, project_root) 
+
+from Components.bwt_calculator import encoder as bwt
+
 
 def program():
     
@@ -19,7 +31,7 @@ def program():
             case 1:
                 ### Terminal Input ###
                 valore = str(input("Insert string to encode with BWT:"))
-                print(f"Transformed: {bwt.encoder(valore)}")
+                print(f"Transformed: {bwt(valore)}")
             case 2:
                 ### File Input ###
                 with open("data/input.txt", "r") as in_file:
