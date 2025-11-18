@@ -38,6 +38,8 @@ python ./app/Terminal/main.py
 
 #### Server
 
+##### Terminal
+
 - <i>venv opening refers only to windows</i>
 
 ```bash
@@ -46,6 +48,15 @@ python ./app/Terminal/main.py
 # Start Server
 fastapi dev .\app\API\api.py
 ```
+
+##### Docker
+```bash
+# Pull Docker image
+docker pull ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
+# Start Server
+docker run -d --name burrow-wheeler-transform-server ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
+```
+
 
 #### Client
 
