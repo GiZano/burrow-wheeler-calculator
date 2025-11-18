@@ -9,7 +9,7 @@ components_path = os.path.join(project_root, 'Components') # get components path
 sys.path.insert(0, components_path)
 sys.path.insert(0, project_root) 
 
-from Components.bwt_calculator import encoder as bwt
+from api.Components.bwt_calculator import encoder as bwt
 
 
 def program():
