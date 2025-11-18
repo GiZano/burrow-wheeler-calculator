@@ -57,7 +57,6 @@ docker pull ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
 docker run -d --name burrow-wheeler-transform-server ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
 ```
 
-
 #### Client
 
 ```bash
