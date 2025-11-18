@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api-app:
+    build: ./app/api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/api:/app
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped

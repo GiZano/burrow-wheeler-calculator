@@ -1,14 +1,3 @@
-import sys
-import os
-
-# Get absolute path of project directory 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.dirname(current_dir)                # get project root 
-components_path = os.path.join(project_root, 'Components') # get components path
-
-sys.path.insert(0, components_path)
-sys.path.insert(0, project_root)
-
 from datetime import datetime, timezone
 from fastapi import FastAPI
 from Components.bwt_calculator import encoder as bwt
