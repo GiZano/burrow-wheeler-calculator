@@ -9,7 +9,7 @@ components_path = os.path.join(project_root, 'Components') # get components path
 sys.path.insert(0, components_path)
 sys.path.insert(0, project_root) 
 
-from api.Components.bwt_calculator import encoder as bwt
+from Components.bwt_calculator import encoder as bwt
 
 
 def program():
@@ -19,7 +19,7 @@ def program():
         print('''
 === Menù ===
 1) Terminal input
-2) File input (input.txt)
+2) File input (./data/input.txt)
 0) Exit
         ''')
         select: int = int(input("Select:"))
@@ -34,15 +34,16 @@ def program():
                 print(f"Transformed: {bwt(valore)}")
             case 2:
                 ### File Input ###
-                with open("data/input.txt", "r") as in_file:
-                    with open("data/output.txt", "w") as out_file:
+                with open("./data/input.txt", "r") as in_file:
+                    with open("./data/output.txt", "w") as out_file:
                         value = ""
                         for line in in_file:
                            # If the file is made of multiple lines, put it all together in one single line
                            value = value + line.strip("\n").strip()
-                        transformed = bwt.encoder(value)
+                        transformed = bwt(value)
                         print(f"Transformed: {transformed}")
                         out_file.write(transformed)
+                        out_file.flush()
 
 if __name__ == "__main__":
     print(program())
