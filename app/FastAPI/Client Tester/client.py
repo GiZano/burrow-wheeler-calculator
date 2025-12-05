@@ -1,4 +1,9 @@
+# Import requests library 
 import requests
+
+# Connection settings
+HOST = 'localhost'
+PORT = '8000'
 
 def program():
     print("=== BWT Client ===")
@@ -20,9 +25,13 @@ def program():
                 if(len(original) == 0):
                     print("Invalid string!")
                 else:
-                    url = f"http://localhost:8000/calculator/{original}"
+                    # Elaboration endpoint URL
+                    url = f"http://{HOST}:{PORT}/calculator/{original}"
+                    # Encoding request to the server
                     response = requests.get(url)
+                    # Get transformed from the response body
                     transformed = response.json()['encoded']
+                    # Print results
                     print(f"Original: {original}")
                     print(f"Transformed: {transformed}")
 
