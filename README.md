@@ -11,10 +11,10 @@ You can navigate through the README here:
 ## <p id='start'> Quick Start </p>
 
 There are three main ways to use this code, do the first part below, then choose between this execution choices:
-- <a href="./app/Components/README.md">Debug</a>
-- <a href="./app/Terminal/README.md">Terminal</a>
-- <a href="./app/FastAPI/README.md">API server - client</a>
-- <a href='./app/Socket/README.md'>Normal Client - Server</a>
+- <a href="./app/Components">Debug</a>
+- <a href="./app/Terminal">Terminal</a>
+- <a href="./app/FastAPI">API server - client</a>
+- <a href='./app/Socket'>Normal Client - Server</a>
 
 #### Clone repository in local
 
