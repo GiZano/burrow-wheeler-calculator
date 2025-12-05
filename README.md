@@ -3,12 +3,18 @@
 ## Description
 
 Python code to calculate the burrow wheeler transform equivalent of a given string.
-There are three main ways to use this code:
-- <a href="#debug">Debug</a>
-- <a href="#terminal">Terminal</a>
-- <a href="#api">API server - client</a>
+You can navigate through the README here:
+- <a href='#start'>Quick Start tutorial</a>
+- <a href='#work'> How does this algorithm work?</a>
+- <a href='#data'> Where is the default input data from?</a>
 
-## Quick Start
+## <p id='start'> Quick Start </p>
+
+There are three main ways to use this code, do the first part below, then choose between this execution choices:
+- <a href="./app/Components/README.md">Debug</a>
+- <a href="./app/Terminal/README.md">Terminal</a>
+- <a href="./app/FastAPI/README.md">API server - client</a>
+- <a href='./app/Socket/README.md'>Normal Client - Server</a>
 
 #### Clone repository in local
 
@@ -22,51 +28,8 @@ git clone https://github.com/GiZano/burrow-wheeler-calculator.git
 cd burrow-wheeler-calculator
 ```
 
-### <p id="debug">BWT Debug</p>
 
-```bash
-python ./app/Components/bwt_calculator.py
-```
-
-### <p id="terminal">Terminal App</p>
-
-```bash
-python ./app/Terminal/main.py
-```
-
-### <p id="api">API App</p>
-
-#### Server
-
-##### Terminal
-
-- <i>venv opening refers only to windows</i>
-
-```bash
-# Open virtual environment
-.\.venv\Scripts\activate
-# Start Server
-fastapi dev .\app\API\api.py
-```
-
-##### Docker
-```bash
-# Pull Docker image
-docker pull ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
-# Start Server
-docker run -d --name burrow-wheeler-transform-server ghcr.io/gizano/burrow-wheeler-transform-server:v1.0.0
-```
-
-#### Client
-
-```bash
-# Open virtual environment
-.\.venv\Scripts\activate
-# Run client
-python '.\app\Client Tester\client.py'
-```
-
-## Burrow Wheeler Transform Algorithm
+## <p id='work'> Burrow Wheeler Transform Algorithm </p>
 
 Algorithm to make similar character be near to each other,
 making it easier to compress the strings afterwhile with other algorithms.
@@ -119,7 +82,7 @@ BANANA$:
 
 <strong>Transformed: ANNB$AA </strong>
 
-## Mock Data
+## <p id='data'> Mock Data </p>
 
 The mock data, present in "data/input.txt" can be found <a href="https://rest.uniprot.org/uniprotkb/O95905.fasta">here</a>
 

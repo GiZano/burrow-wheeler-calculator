@@ -1,7 +1,9 @@
+# Import requested libraries
 from datetime import datetime, timezone
 from fastapi import FastAPI
 from Components.bwt_calculator import encoder as bwt
 
+# Create an app istance
 app = FastAPI()
 
 # root getter
