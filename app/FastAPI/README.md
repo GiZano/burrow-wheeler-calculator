@@ -3,6 +3,7 @@
 ## Description
 
 Here you can find the FastAPI version of the application. You can simply execute the server script on the machine and then access the api endpoint to receive back the transformed thanks to the client script.
+<i>(Only FastAPI folder needed to run, no need to keep the whole project).</i>
 
 Check out more:
 - <a href='#start'>Quick Start</a>
@@ -32,7 +33,7 @@ cd '.\API Server'
 # Open virtual environment
 .\.venv\Scripts\activate
 # Start Server
-fastapi dev .\api.py
+docker-compose up -d
 ```
 
 ##### Docker

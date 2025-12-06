@@ -1,12 +1,12 @@
-version: '3.8'
-
 services:
   api-app:
-    build: ./api
+    build: .
     ports:
       - "8000:8000"
     volumes:
-      - ./api:/app
+      # Montiamo la cartella corrente (.) dentro /app nel container
+      # Questo permette all'hot-reload di funzionare quando modifichi il codice
+      - .:/app
     environment:
       - PYTHONPATH=/app
     restart: unless-stopped

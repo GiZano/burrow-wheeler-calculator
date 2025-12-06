@@ -4,7 +4,7 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Copy requirements
+# Copy requirements (assicurati che questo file esista nella stessa cartella!)
 COPY api_requirements.txt .
 
 # Set Labels
@@ -16,8 +16,9 @@ LABEL org.opencontainers.image.version="1.0.0"
 RUN pip install --no-cache-dir -r api_requirements.txt
 
 # Copy app code
+# Copiamo i file dalla cartella corrente (.) alla workdir del container (.)
 COPY api.py .
-COPY ./Components/ ./Components/
+COPY Components/ ./Components/
 
 # Expose port 8000 
 EXPOSE 8000
