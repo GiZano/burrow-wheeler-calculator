@@ -80,8 +80,8 @@ python '.\app\Client Tester\client.py'
 
 - <strong>Method</strong>: <i>GET</i>
 - <strong>Output</strong>:
-    - <i>original</i>: received string
-    - <i>encoded</i>: encoded string
+    - <i>position</i>: "/"
+    - <i>message</i>: "Hello World!"
 
 ### /health
 
@@ -89,5 +89,6 @@ python '.\app\Client Tester\client.py'
 
 - <strong>Method</strong>: <i>GET</i>
 - <strong>Output</strong>:
-    - <i>original</i>: received string
-    - <i>encoded</i>: encoded string
+    - <i>position</i>: "/health"
+    - <i>status</i>: "healthy"
+    - <i>timestamp</i>: time of received request
